@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="420" viewBox="0 0 520 420" font-family="Helvetica,Arial,sans-serif">
+<rect width="520" height="420" fill="white"/>
+<text x="260.0" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">K-Means: final cluster assignments (stars = centroids)</text>
+<circle cx="43.0" cy="294.9" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="108.5" cy="309.8" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="126.3" cy="271.9" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="44.3" cy="306.9" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="106.9" cy="278.3" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="59.2" cy="255.9" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="120.8" cy="277.7" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="77.2" cy="255.5" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="150.3" cy="286.3" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="119.2" cy="217.9" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="122.4" cy="308.8" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="112.5" cy="275.1" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="78.5" cy="300.7" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="51.6" cy="293.2" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="166.1" cy="311.5" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="76.4" cy="231.6" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="40.0" cy="271.3" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="54.3" cy="304.1" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="42.8" cy="263.6" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="92.0" cy="230.4" r="5" fill="#2563eb" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="410" cy="50" r="5" fill="#2563eb"/>
+<text x="422" y="54" font-size="12" fill="#333">cluster 0</text>
+<circle cx="282.5" cy="361.5" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="296.2" cy="342.5" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="368.9" cy="295.8" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="259.4" cy="342.1" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="332.6" cy="293.8" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="337.9" cy="358.3" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="308.4" cy="326.8" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="311.3" cy="295.1" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="269.6" cy="338.9" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="276.2" cy="359.9" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="307.0" cy="293.7" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="387.4" cy="369.9" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="266.7" cy="305.8" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="386.8" cy="313.9" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="290.2" cy="335.2" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="328.0" cy="321.4" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="281.4" cy="373.4" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="349.6" cy="380.0" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="379.6" cy="304.6" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="376.3" cy="302.7" r="5" fill="#dc2626" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="410" cy="70" r="5" fill="#dc2626"/>
+<text x="422" y="74" font-size="12" fill="#333">cluster 1</text>
+<circle cx="381.1" cy="83.5" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="351.4" cy="95.2" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="451.0" cy="83.6" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="426.2" cy="95.8" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="458.7" cy="113.6" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="404.5" cy="64.5" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="441.7" cy="81.4" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="356.5" cy="70.3" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="368.8" cy="92.4" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="409.2" cy="112.0" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="461.2" cy="45.0" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="446.3" cy="113.3" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="418.9" cy="52.3" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="412.0" cy="74.2" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="435.3" cy="40.0" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="400.2" cy="73.7" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="455.0" cy="70.6" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="353.6" cy="73.8" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="465.9" cy="110.6" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="480.0" cy="130.9" r="5" fill="#16a34a" fill-opacity="0.85" stroke="white" stroke-width="0.5"/>
+<circle cx="410" cy="90" r="5" fill="#16a34a"/>
+<text x="422" y="94" font-size="12" fill="#333">cluster 2</text>
+<path d="M89.6,268.3 l2.6,7.9 8.3,0 -6.7,4.9 2.6,7.9 -6.8,-4.9 -6.8,4.9 2.6,-7.9 -6.7,-4.9 8.3,0 z" fill="black" stroke="white" stroke-width="1"/>
+<path d="M319.8,321.8 l2.6,7.9 8.3,0 -6.7,4.9 2.6,7.9 -6.8,-4.9 -6.8,4.9 2.6,-7.9 -6.7,-4.9 8.3,0 z" fill="black" stroke="white" stroke-width="1"/>
+<path d="M418.9,74.8 l2.6,7.9 8.3,0 -6.7,4.9 2.6,7.9 -6.8,-4.9 -6.8,4.9 2.6,-7.9 -6.7,-4.9 8.3,0 z" fill="black" stroke="white" stroke-width="1"/>
+</svg>
