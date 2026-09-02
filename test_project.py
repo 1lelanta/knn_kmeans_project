@@ -1,10 +1,3 @@
-"""
-test_project.py
-----------------
-Basic correctness checks for the from-scratch implementations.
-Run with:  python3 -m pytest test_project.py -v
-        or: python3 test_project.py
-"""
 
 import math
 

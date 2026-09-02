@@ -1,11 +1,4 @@
 """
-demo.py
--------
-Runs both deliverables end-to-end and prints a walkthrough of what's
-happening at each step, exactly as the "Code Clarity & Walkthrough"
-deliverable asks for. Also renders two SVGs so the results can be inspected
-visually: knn_result.svg and kmeans_result.svg.
-
 Run with:  python3 demo.py
 """
 
@@ -34,21 +27,20 @@ def demo_knn():
     knn.fit(X, y)
 
     # A handful of query points, including one deliberately placed near a
-    # cluster boundary to exercise the tie-break / majority-vote logic.
     queries = [
-        [2.2, 1.8],   # deep inside class A
-        [8.1, 3.3],   # deep inside class B
-        [5.3, 8.7],   # deep inside class C
+        [2.2, 1.8],   
+        [8.1, 3.3],   
+        [5.3, 8.7], 
         [5.0, 5.0],   # ambiguous, near the middle of all three
     ]
 
-    print("\nStep-by-step for the first query point (showing the pipeline):")
+    print("\nStep-by-step for the first query point:")
     q = queries[0]
     distances = [(euclidean_distance(q, x), label) for x, label in zip(X, y)]
     ranked = quicksort(distances, key=lambda pair: pair[0])
     print(f"  Query point: {q}")
     print(f"  1) Distance metric computed to all {len(X)} training points")
-    print(f"  2) Custom quicksort ranks them ascending. Closest 5:")
+    print(f"  2) sort algorithm ranks them in ascending. Closest 5:")
     for dist, label in ranked[:5]:
         print(f"       distance={dist:.3f}  label={label}")
     votes = {}
@@ -75,7 +67,7 @@ def demo_kmeans():
     section("PART 2 -- K-Means Clustering (unsupervised)")
 
     X = make_unlabeled_blobs()
-    print(f"Unlabeled dataset: {len(X)} 2D points, no ground-truth clusters")
+    print(f"Unlabeled dataset: {len(X)} 2D points")
 
     k = 3
     model = KMeans(k=k, max_iters=100, tol=1e-4, seed=1)
@@ -99,16 +91,16 @@ def demo_kmeans():
 
 
 def demo_edge_cases():
-    section("EDGE CASES (as required by 'Code Clarity & Walkthrough')")
+    section("EDGE CASES ")
 
     print("1) KNN tie in majority voting:")
     X = [[0, 0], [0, 1], [10, 10], [10, 11]]
     y = ["A", "B", "C", "D"]
-    knn = KNNClassifier(k=4)  # k = all points -> guaranteed 1-1-1-1 tie
+    knn = KNNClassifier(k=4)  
     knn.fit(X, y)
     q = [0, 0.4]
     result = knn.predict_one(q)
-    print(f"   4 neighbors, 4 different labels -> perfect tie on vote count.")
+    print(f"   4 neighbors, 4 different labels")
     print(f"   Tie-break rule: nearest individual neighbor wins.")
     print(f"   Query {q} -> resolved to class '{result}' "
           f"(closest point is [0, 0] which is class A)")

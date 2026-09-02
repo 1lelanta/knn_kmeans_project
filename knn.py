@@ -1,7 +1,5 @@
 
 from core import euclidean_distance, quicksort
-
-
 class KNNClassifier:
     def __init__(self, k=3):
         if k < 1:

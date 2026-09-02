@@ -1,17 +1,8 @@
-"""
-dataset.py
-----------
-Small synthetic 2D datasets, generated with only the standard `random`
-module (no numpy). The slides reference "the provided 2D dataset" for KNN;
-since no dataset file came with the deck, this generates one deterministically
-(fixed seed) so results are reproducible.
-"""
 
 import random
 
-
+ """A labeled 2D dataset for KNN: three visually separated classes."""
 def make_labeled_blobs(seed=42):
-    """A labeled 2D dataset for KNN: three visually separated classes."""
     rng = random.Random(seed)
     centers = {
         "A": (2.0, 2.0),
@@ -27,6 +18,7 @@ def make_labeled_blobs(seed=42):
             y.append(label)
     return X, y
 
+# generate a random 2D dataset for K-Means: three loose clusters
 
 def make_unlabeled_blobs(seed=7):
     """An unlabeled 2D dataset for K-Means: three loose clusters."""

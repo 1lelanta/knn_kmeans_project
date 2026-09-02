@@ -1,14 +1,6 @@
-"""
-plot_svg.py
------------
-Tiny dependency-free 2D scatter-plot renderer that writes raw SVG. Used only
-for visualizing results -- it plays no part in the KNN / K-Means algorithms
-themselves, and avoids pulling in matplotlib/numpy to keep the whole project
-at zero external libraries.
-"""
+
 
 PALETTE = ["#2563eb", "#dc2626", "#16a34a", "#d97706", "#7c3aed", "#0891b2"]
-
 
 def _scale(points, width, height, pad=40):
     xs = [p[0] for p in points]
