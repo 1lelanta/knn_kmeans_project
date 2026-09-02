@@ -1,19 +1,3 @@
-"""
-knn.py
-------
-K-Nearest Neighbors classifier, implemented per the "Deep Dive: KNN Mechanics"
-spec:
-
-  1. Distance Metric   -> euclidean_distance() for every training point
-  2. Custom Sorting    -> quicksort() ranks distances ascending (no sorted())
-  3. Majority Voting   -> top-K labels are tallied; majority class wins
-
-Edge case handled: ties in the vote. If two or more classes receive the same
-number of votes among the K neighbors, the tie is broken by whichever tied
-class has the closer of its neighbors (i.e. the smallest individual distance
-among the tied classes) -- this keeps the decision purely geometric rather
-than relying on arbitrary insertion order.
-"""
 
 from core import euclidean_distance, quicksort
 
