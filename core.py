@@ -1,23 +1,9 @@
-"""
-core.py
---------
-Zero-dependency building blocks for both algorithms:
-  - euclidean_distance:  d = sqrt(sum((xi - yi)^2))
-  - quicksort:           a from-scratch sort (built-in sort()/sorted() are banned
-                          for the KNN ranking step)
-
-Only the standard `math` module is used, purely for sqrt() — that is basic
-arithmetic, not a machine-learning helper, so it does not violate the
-"no external libraries" rule (no numpy / pandas / sklearn anywhere).
-"""
 
 import math
 
 
 def euclidean_distance(a, b):
     """Straight-line distance between two points of equal dimensionality.
-
-    d = sqrt( sum_i (a_i - b_i)^2 )
     """
     if len(a) != len(b):
         raise ValueError("Points must have the same number of dimensions")
@@ -28,12 +14,6 @@ def euclidean_distance(a, b):
 
 
 def quicksort(items, key=lambda x: x):
-    """Ascending quicksort implemented from scratch (Lomuto partition).
-
-    `items` is not mutated; a new sorted list is returned. `key` extracts the
-    comparison value from each element (mirrors the built-in sort's `key=`,
-    without relying on the built-in sort itself).
-    """
     if len(items) <= 1:
         return list(items)
 
