@@ -1,22 +1,4 @@
-"""
-kmeans.py
----------
-K-Means clustering, implemented per the "Deep Dive: K-Means Mechanics" spec:
 
-  1. Centroid Init   -> K starting centers chosen from the data points
-  2. Assignment Step -> every point assigned to its nearest centroid
-  3. Update Step     -> each centroid recomputed as the mean of its cluster
-
-Loops until convergence (centroids stop moving beyond `tol`) or `max_iters`
-is reached.
-
-Edge case handled: empty clusters. If an assignment step leaves some
-centroid with zero points, the mean update is undefined (0/0). Instead of
-crashing or silently freezing that centroid, it is reseeded at the data
-point that is currently *farthest* from its own assigned centroid -- the
-point the model is fitting worst -- which gives the empty cluster a fresh,
-useful starting position for the next iteration.
-"""
 
 import random
 
@@ -33,7 +15,6 @@ class KMeans:
         self.rng = random.Random(seed)
         self.centroids = []
         self.labels_ = []
-        self.history_ = []
 
     def fit(self, X):
         if len(X) < self.k:
@@ -41,7 +22,6 @@ class KMeans:
 
         # 1. Centroid Init: pick k distinct data points as starting centers
         self.centroids = [list(p) for p in self.rng.sample(X, self.k)]
-        self.history_ = []
 
         for iteration in range(self.max_iters):
             # 2. Assignment Step
@@ -57,10 +37,6 @@ class KMeans:
             )
             self.centroids = new_centroids
             self.labels_ = labels
-            self.history_.append({
-                "centroids": [list(c) for c in self.centroids],
-                "labels": list(self.labels_),
-            })
 
             if shift < self.tol:
                 break
