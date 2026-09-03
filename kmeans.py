@@ -33,6 +33,7 @@ class KMeans:
         self.rng = random.Random(seed)
         self.centroids = []
         self.labels_ = []
+        self.history_ = []
 
     def fit(self, X):
         if len(X) < self.k:
@@ -40,6 +41,7 @@ class KMeans:
 
         # 1. Centroid Init: pick k distinct data points as starting centers
         self.centroids = [list(p) for p in self.rng.sample(X, self.k)]
+        self.history_ = []
 
         for iteration in range(self.max_iters):
             # 2. Assignment Step
@@ -55,6 +57,10 @@ class KMeans:
             )
             self.centroids = new_centroids
             self.labels_ = labels
+            self.history_.append({
+                "centroids": [list(c) for c in self.centroids],
+                "labels": list(self.labels_),
+            })
 
             if shift < self.tol:
                 break

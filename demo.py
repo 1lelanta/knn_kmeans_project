@@ -1,12 +1,9 @@
-"""
-Run with:  python3 demo.py
-"""
 
 from core import euclidean_distance, quicksort
 from knn import KNNClassifier
 from kmeans import KMeans
 from dataset import make_labeled_blobs, make_unlabeled_blobs
-from plot_svg import scatter_svg
+from plot_svg import animated_kmeans_html, scatter_svg
 
 
 def section(title):
@@ -88,6 +85,13 @@ def demo_kmeans():
                 "K-Means: final cluster assignments (stars = centroids)",
                 star_points=model.centroids)
     print("\nSaved visualization -> kmeans_result.svg")
+    animated_kmeans_html("kmeans_simulation.html", X, model.history_)
+    try:
+        from IPython.display import IFrame, display
+        display(IFrame(src="kmeans_simulation.html", width=640, height=500))
+        print("Displayed animation inline (Colab/Jupyter).")
+    except ImportError:
+        print("Saved simulation -> kmeans_simulation.html")
 
 
 def demo_edge_cases():

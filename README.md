@@ -14,16 +14,21 @@ the algorithmic core. Only the standard `math` (for `sqrt`) and `random`
 | `knn.py` | `KNNClassifier`: distance → custom sort → majority vote |
 | `kmeans.py` | `KMeans`: centroid init → assignment step → update step, looped to convergence |
 | `dataset.py` | Synthetic 2D datasets (deterministic, seeded) — the deck references "the provided 2D dataset" but none shipped with it, so this generates one |
-| `plot_svg.py` | Dependency-free SVG scatter-plot renderer, for visualizing results only (not part of either algorithm) |
+| `plot_svg.py` | Dependency-free SVG scatter-plot renderer and self-contained K-Means animation |
 | `demo.py` | Runs both algorithms end-to-end with a printed step-by-step walkthrough |
 | `test_project.py` | Correctness tests, including the two required edge cases |
 
 ## Run it
 
 ```bash
-python3 demo.py            # walkthrough + generates knn_result.svg / kmeans_result.svg
+python3 demo.py            # walkthrough + generates SVGs and kmeans_simulation.html
 python3 test_project.py    # correctness checks (or: python3 -m pytest test_project.py -v)
 ```
+
+`kmeans_simulation.html` animates the centroids moving through each assignment
+and update iteration. In Colab or Jupyter, `demo_kmeans()` displays the
+animation inline; in a regular terminal, open the generated HTML file in a
+browser.
 
 ## How each deliverable is met
 

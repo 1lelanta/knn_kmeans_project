@@ -58,3 +58,65 @@ def scatter_svg(path, groups, title, width=520, height=420, star_points=None):
 
     with open(path, "w") as f:
         f.write("\n".join(svg))
+
+
+def animated_kmeans_html(path, points, frames, title="K-Means simulation",
+                         width=620, height=480):
+    """Write a self-contained animation that also renders in Google Colab."""
+    all_points = points + [c for frame in frames for c in frame["centroids"]]
+    transform = _scale(all_points, width, height, pad=55)
+    point_pixels = [transform(p) for p in points]
+    frame_data = []
+    for frame in frames:
+        frame_data.append({
+            "centroids": [transform(c) for c in frame["centroids"]],
+            "labels": frame["labels"],
+        })
+
+    circles = []
+    for index, (sx, sy) in enumerate(point_pixels):
+        circles.append(
+            f'<circle id="point-{index}" cx="{sx:.1f}" cy="{sy:.1f}" '
+            'r="5" stroke="white" stroke-width="0.7"/>')
+    stars = [f'<text id="centroid-{i}" text-anchor="middle" '
+             'font-size="28" font-weight="bold">*</text>'
+             for i in range(len(frames[0]["centroids"]))]
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" '
+           f'height="{height}" viewBox="0 0 {width} {height}">'
+           f'<rect width="100%" height="100%" fill="white"/>'
+           f'<text x="{width / 2:.0f}" y="28" text-anchor="middle" '
+           'font-family="sans-serif" font-size="18" font-weight="bold">'
+           f'{title}</text>'
+           f'<text id="iteration" x="{width / 2:.0f}" y="52" '
+           'text-anchor="middle" font-family="sans-serif" font-size="13" '
+           'fill="#555"></text>'
+           + "".join(circles) + "".join(stars) + '</svg>')
+    import json
+    html = f'''<!doctype html>
+<html><head><meta charset="utf-8"><title>{title}</title></head>
+<body style="margin:0;background:#f7f7f5">{svg}
+<script>
+const frames = {json.dumps(frame_data)};
+const colors = {json.dumps(PALETTE)};
+const duration = 850;
+let frameIndex = 0;
+function render() {{
+    const frame = frames[frameIndex];
+    frame.labels.forEach((label, index) => {{
+        document.getElementById(`point-${{index}}`).setAttribute("fill", colors[label % colors.length]);
+    }});
+    frame.centroids.forEach((center, index) => {{
+        const star = document.getElementById(`centroid-${{index}}`);
+        star.setAttribute("x", center[0]);
+        star.setAttribute("y", center[1] + 9);
+        star.setAttribute("fill", colors[index % colors.length]);
+    }});
+    document.getElementById("iteration").textContent =
+        `Iteration ${{frameIndex + 1}} / ${{frames.length}}`;
+    frameIndex = (frameIndex + 1) % frames.length;
+}}
+render();
+setInterval(render, duration);
+</script></body></html>'''
+    with open(path, "w") as output:
+        output.write(html)

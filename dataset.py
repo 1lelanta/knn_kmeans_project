@@ -1,7 +1,7 @@
 
 import random
 
- """A labeled 2D dataset for KNN: three visually separated classes."""
+"""A labeled 2D dataset for KNN: three visually separated classes."""
 def make_labeled_blobs(seed=42):
     rng = random.Random(seed)
     centers = {
