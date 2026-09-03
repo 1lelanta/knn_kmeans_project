@@ -85,14 +85,6 @@ def demo_kmeans():
                 "K-Means: final cluster assignments (stars = centroids)",
                 star_points=model.centroids)
     print("\nSaved visualization -> kmeans_result.svg")
-    animated_kmeans_html("kmeans_simulation.html", X, model.history_)
-    try:
-        from IPython.display import IFrame, display
-        display(IFrame(src="kmeans_simulation.html", width=640, height=500))
-        print("Displayed animation inline (Colab/Jupyter).")
-    except ImportError:
-        print("Saved simulation -> kmeans_simulation.html")
-
 
 def demo_edge_cases():
     section("EDGE CASES ")
@@ -127,5 +119,4 @@ if __name__ == "__main__":
     demo_kmeans()
     demo_edge_cases()
     print("\n" + "=" * 60)
-    print("Done. See knn_result.svg and kmeans_result.svg for visuals.")
     print("=" * 60)
